@@ -1,0 +1,40 @@
+<h1>Schedules</h1>
+<table>
+  <thead>
+  <tr>
+
+    <th>N_customer</th>
+    <th>Starttime</th>
+    <th>Endtime</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @schedules.each do |schedule| %>
+    <tr>
+      <td><%= schedule.ncustomer %></td>
+      <%if schedule.starttime ==nil %>
+        <td><%=link_to 'Start Now', "/restaurant_table_management/start/#{schedule.id}",method: 'patch' %></td>
+      <%else %>
+      <td><%= schedule.starttime %></td>
+      <%end %>
+      <%if schedule.endtime ==nil %>
+        <td><%=link_to 'End Now', "/restaurant_table_management/end/#{schedule.id}" ,method: 'patch'%></td>
+      <%else %>
+        <td><%= schedule.endtime %></td>
+      <%end %>
+
+
+
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+
+<%= link_to 'New schedule', "/restaurant_table_management/new_schedule/#{@restaurant.id}/#{@table.id}" %><br>
+<%= link_to 'Back', "/restaurant_table_management/index_table/#{@restaurant.id}" %>

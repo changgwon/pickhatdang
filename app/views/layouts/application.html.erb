@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Untitled15</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%if current_user %>
+  <%=link_to '로그아웃','/users/sign_out',method:'delete' %>
+
+
+  <%=link_to '정보변경','/users/edit' %><br>
+  <%end %>
+
+    <%= yield %>
+  </body>
+</html>

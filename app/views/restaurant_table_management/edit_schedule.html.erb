@@ -1,0 +1,9 @@
+<%= form_for @schedule, url:"/restaurant_table_management/update_schedule/#{@schedule.restaurant_id}/#{@schedule.table_id}",method: "patch" do |f| %>
+  손님 수 : <%=f.text_field :ncustomer %><br>
+
+
+  <%= f.submit "save" %>
+
+<% end %>
+
+

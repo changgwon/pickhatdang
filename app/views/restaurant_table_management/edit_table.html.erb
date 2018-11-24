@@ -1,0 +1,9 @@
+<%= form_for @table, url:"/restaurant_table_management/update_table/#{@table.restaurant_id}",method: "patch" do |f| %>
+  테이블 번호 : <%=f.text_field :table_num %><br>
+  좌석수 : <%=f.text_field :nseats %><br>
+
+  <%= f.submit "save" %>
+
+<% end %>
+
+

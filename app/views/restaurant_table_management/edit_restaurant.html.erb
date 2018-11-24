@@ -1,0 +1,7 @@
+<%= form_for @restaurant, url:"/restaurant_table_management/update_restaurant/#{@restaurant.id}", method: 'patch' do |f| %>
+  레스토랑 이름 : <%=f.text_field :name %><br>
+  장소 : <%=f.text_field :location %><br>
+  장르 : <%=f.text_field :genre %><br>
+  <%= f.submit %>
+
+<% end %>

@@ -1,0 +1,28 @@
+<h1>Restaurants</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Genre</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @restaurants.each do |restaurant| %>
+    <tr>
+      <td><%= restaurant.name %></td>
+      <td><%= restaurant.location %></td>
+      <td><%= restaurant.genre %></td>
+      <td><%= link_to '테이블 보기', "/restaurant_table_management/index_table/#{restaurant.id}" %></td>
+      <td><%= link_to '식당정보변경', "/restaurant_table_management/edit_restaurant/#{restaurant.id}" %></td>
+      <td><%= link_to '식당삭제', "/restaurant_table_management/delete_restaurant/#{restaurant.id}",method:'delete' %></td>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Restaurant', "/restaurant_table_management/new_restaurant" %>
