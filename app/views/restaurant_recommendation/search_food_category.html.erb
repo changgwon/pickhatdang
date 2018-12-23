@@ -1,0 +1,7 @@
+<%= form_tag("/restaurant_recommendation/select_food_category", method: "get") do %>
+  <% @foods.each do |food| %>
+    <%=food.food_category %>   <%=radio_button_tag('food_category', food.food_category) %> <br>
+  <% end %>
+  <%= submit_tag("Select_food_category") %>
+<% end %>
+

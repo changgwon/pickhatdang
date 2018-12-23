@@ -1,0 +1,8 @@
+<td><%= link_to '지역선택', "/restaurant_recommendation/search_location_category" %></td>
+<td><%= link_to '음식종류선택', "/restaurant_recommendation/search_food_category" %></td>
+<br>
+현재 지역 :<%=current_user.recommendation_systems.first.location_division %><br>
+현재 음식 :<%=current_user.recommendation_systems.first.food_category %>
+<br>
+<td><%= link_to '선택완료', "" %></td>
+<td><%= link_to '홈으로', "/" %></td>

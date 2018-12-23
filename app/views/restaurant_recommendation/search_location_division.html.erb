@@ -1,0 +1,11 @@
+<%# @locations.each do |location| %>
+  <%#=link_to location.location,"/restaurant_recommendation/select_location_division/#{location.id}" %>
+<%# end %>
+
+
+<%= form_tag("/restaurant_recommendation/select_location_division", method: "get") do %>
+  <%=collection_check_boxes(:location,:locations,@locations,:location,:location) %>
+
+
+<%= submit_tag("Search_restaurant") %>
+    <% end %>

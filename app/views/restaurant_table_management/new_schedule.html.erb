@@ -1,10 +1,14 @@
 <%= form_for @schedule, url:"/restaurant_table_management/create_schedule/#{@schedule.restaurant_id}/#{@schedule.table_id}",method: "post" do |f| %>
   손님 수 : <%=f.text_field :ncustomer %><br>
+  착석 시간 : <%=f.text_field :starttime %><br>
+  퇴장 시간 : <%=f.text_field :endtime %><br>
+  예약상태 : <%=f.text_field :reservestatus %><br>
+  예약시간 : <%=f.text_field :reservetime %><br>
+  예약손님 id : <%=f.text_field :user_id %><br>
+
 
 
   <%= f.submit "save" %>
 
 <% end %>
-
-
-
+시간은 2018-11-27 04:38:38 형식으로 입력

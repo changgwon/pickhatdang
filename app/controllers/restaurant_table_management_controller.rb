@@ -1,6 +1,15 @@
 class RestaurantTableManagementController < ApplicationController
 
   before_action :authenticate_user!
+  def home
+    if current_user.user_type==1
+      redirect_to '/restaurant_table_management/index_restaurant'
+    else
+      redirect_to '/restaurant_recommendation/my_page'
+  end
+
+  end
+
   def new_restaurant
     @restaurant = Restaurant.new
   end
@@ -11,6 +20,7 @@ class RestaurantTableManagementController < ApplicationController
   end
   def index_restaurant
     @restaurants = current_user.restaurants
+
   end
   def delete_restaurant
     @restaurant=Restaurant.find(params[:restaurant_id])
@@ -114,7 +124,7 @@ class RestaurantTableManagementController < ApplicationController
     params.require(:table).permit(:be_seated, :location, :nseats, :table_num)
   end
   def schedule_params
-    params.require(:schedule).permit(:ncustomer, :starttime, :endtime,:reservestatus,:reservetime)
+    params.require(:schedule).permit(:ncustomer, :starttime, :endtime,:reservestatus,:reservetime,:isreserver, :user_id)
   end
 
 

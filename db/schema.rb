@@ -10,7 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181124103406) do
+ActiveRecord::Schema.define(version: 20181205062218) do
+
+  create_table "food_categories", force: :cascade do |t|
+    t.string "food_category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "location_categories", force: :cascade do |t|
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "location_divisions", force: :cascade do |t|
+    t.integer "category_id"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "location_category_id"
+  end
+
+  create_table "priorities", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "distance"
+    t.integer "price"
+    t.integer "rating"
+    t.integer "waiting"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "recommendation_systems", force: :cascade do |t|
+    t.integer "user_id"
+    t.text "location_division"
+    t.string "food_category"
+    t.integer "distance"
+    t.integer "price"
+    t.integer "rating"
+    t.integer "waiting"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
@@ -35,6 +77,8 @@ ActiveRecord::Schema.define(version: 20181124103406) do
     t.integer "reservetime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "isreserver"
   end
 
   create_table "tables", force: :cascade do |t|

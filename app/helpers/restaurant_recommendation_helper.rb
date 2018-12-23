@@ -1,0 +1,2 @@
+module RestaurantRecommendationHelper
+end

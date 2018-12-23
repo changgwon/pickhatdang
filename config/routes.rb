@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
   devise_for :users
-
-  root 'restaurant_table_management#index_restaurant'
+  root 'restaurant_table_management#home'
+  get 'restaurant_recommendation/my_page'
+  get 'restaurant_recommendation/priority_setting'
+  get'restaurant_recommendation/search_setting'
+  get 'restaurant_recommendation/select_food_category'
+  post 'restaurant_recommendation/create_priority'
+  patch 'restaurant_recommendation/update_priority'
+  get 'restaurant_recommendation/select_location_division'
+  get 'restaurant_recommendation/search_food_category'
+  get 'restaurant_recommendation/search_restaurant'
+  get 'restaurant_recommendation/search_location_category'
+  get 'restaurant_recommendation/search_location_division/:category_id' => 'restaurant_recommendation#search_location_division'
+  get 'restaurant_table_management/index_restaurant'
   delete 'restaurant_table_management/delete_restaurant/:restaurant_id' => 'restaurant_table_management#delete_restaurant'
   patch 'restaurant_table_management/update_restaurant/:restaurant_id' =>'restaurant_table_management#update_restaurant'
   get 'restaurant_table_management/edit_restaurant/:restaurant_id' => 'restaurant_table_management#edit_restaurant'

@@ -1,7 +1,8 @@
 <%= form_for @table, url:"/restaurant_table_management/create_table/#{@table.restaurant_id}",method: "post" do |f| %>
   테이블 번호 : <%=f.text_field :table_num %><br>
   좌석수 : <%=f.text_field :nseats %><br>
-
+  착석여부 : <%=f.text_field :be_seated %><br>
+  위치  : <%=f.text_field :location %><br>
   <%= f.submit "save" %>
 
 <% end %>
