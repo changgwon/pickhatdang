@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'restaurant_table_management#home'
+  get 'restaurant_reservation/index_reservation'
+  get 'restaurant_reservation/index_basket'
+  get 'restaurant_reservation/new_schedule/:restaurant_id'=>'restaurant_reservation#new_schedule'
+  get 'restaurant_reservation/restaurantInfo/:restaurant_id'=>'restaurant_reservation#restaurantInfo'
+  post 'restaurant_reservation/create_schedule/:restaurant_id' => 'restaurant_reservation#create_schedule'
+  get 'restaurant_reservation/edit_reservation/:reservation_id'=>'restaurant_reservation#edit_reservation'
+  patch 'restaurant_reservation/update_reservation/:reservation_id'=>'restaurant_reservation#update_reservation'
+  get 'restaurant_reservation/destroy_reservation/:reservation_id'=>'restaurant_reservation#destroy_reservation'
   get 'restaurant_recommendation/my_page'
   get 'restaurant_recommendation/get_recommendation'
   get 'restaurant_recommendation/get_shopping_bag'
@@ -34,4 +42,5 @@ Rails.application.routes.draw do
   patch 'restaurant_table_management/start/:schedule_id' => 'restaurant_table_management#start'
   patch 'restaurant_table_management/end/:schedule_id' => 'restaurant_table_management#end'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end

@@ -1,0 +1,9 @@
+<h1>예약하기</h1>
+<%= form_for @reservation, url:"/restaurant_reservation/update_reservation/#{@reservation.id}", method: 'patch' do |f| %>
+  인원 :<%=f.text_field :ncustomer%><br>
+  날짜 : <%=f.text_field :reservedate%><br>
+  시간 : <%=f.text_field :reservetime%><br>
+  테이블 : <input type="text" name="table_num"><br><br>
+  <%= f.submit %>
+
+<% end %>

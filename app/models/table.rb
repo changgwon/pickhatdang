@@ -32,3 +32,4 @@ class Table < ApplicationRecord
 
 
 end
+

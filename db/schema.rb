@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181224103511) do
+ActiveRecord::Schema.define(version: 20181224094655) do
+
+  create_table "basketlists", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "food_categories", force: :cascade do |t|
     t.string "food_category"
@@ -53,7 +58,8 @@ ActiveRecord::Schema.define(version: 20181224103511) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
+  
+  
   create_table "recommendeds", force: :cascade do |t|
     t.integer "r_id"
     t.float "rating"
@@ -65,6 +71,22 @@ ActiveRecord::Schema.define(version: 20181224103511) do
     t.float "price"
   end
 
+  create_table "reservations", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "restaurant_id"
+    t.integer "table_id"
+    t.integer "ncustomer"
+    t.integer "starttime"
+    t.integer "endtime"
+    t.string "reservestatus"
+    t.integer "reservetime"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "restaurant_name"
+    t.integer "reservedate"
+    t.integer "schedule_id"
+  end
+
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -73,7 +95,7 @@ ActiveRecord::Schema.define(version: 20181224103511) do
     t.integer "pricerange"
     t.integer "opentime"
     t.integer "closingtime"
-    t.float "rating"
+    t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "waiting"
@@ -91,8 +113,10 @@ ActiveRecord::Schema.define(version: 20181224103511) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "isreserver"
+    t.integer "reservedate"
   end
-
+  
+  
   create_table "shopping_bags", force: :cascade do |t|
     t.integer "r_id"
     t.datetime "created_at", null: false
@@ -124,3 +148,4 @@ ActiveRecord::Schema.define(version: 20181224103511) do
   end
 
 end
+
