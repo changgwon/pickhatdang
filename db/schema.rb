@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181205062218) do
+ActiveRecord::Schema.define(version: 20181224103511) do
 
   create_table "food_categories", force: :cascade do |t|
     t.string "food_category"
@@ -54,6 +54,17 @@ ActiveRecord::Schema.define(version: 20181205062218) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "recommendeds", force: :cascade do |t|
+    t.integer "r_id"
+    t.float "rating"
+    t.integer "waiting"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "score"
+    t.integer "user_id"
+    t.float "price"
+  end
+
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -62,9 +73,10 @@ ActiveRecord::Schema.define(version: 20181205062218) do
     t.integer "pricerange"
     t.integer "opentime"
     t.integer "closingtime"
-    t.integer "rating"
+    t.float "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "waiting"
   end
 
   create_table "schedules", force: :cascade do |t|
@@ -79,6 +91,13 @@ ActiveRecord::Schema.define(version: 20181205062218) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "isreserver"
+  end
+
+  create_table "shopping_bags", force: :cascade do |t|
+    t.integer "r_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "tables", force: :cascade do |t|

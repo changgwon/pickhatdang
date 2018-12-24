@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :restaurants
   has_many :priorities
   has_many :recommendation_systems
+  has_many :recommendeds
+  has_many :shopping_bags
 end
