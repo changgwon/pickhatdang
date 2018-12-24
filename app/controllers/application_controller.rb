@@ -7,5 +7,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:user_type])
     devise_parameter_sanitizer.permit(:sign_in, keys: [:user_type])
     devise_parameter_sanitizer.permit(:account_update, keys: [:user_type])
-    end
+  end
+
+  def flex;
+  end
 end

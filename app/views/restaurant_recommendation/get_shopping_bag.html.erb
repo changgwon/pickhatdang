@@ -22,6 +22,7 @@
       <td><%= restaurant.pricerange %></td>
       <td><%= restaurant.rating %></td>
       <td><%= link_to '장바구니 빼기', "/restaurant_recommendation/remove_from_shopping_bag/#{s.r_id}" %></td>
+      <td><%= link_to '조회', "/restaurant_reservation/restaurantInfo/#{s.r_id}" %></td>
   <% end %>
   </tbody>
 </table>

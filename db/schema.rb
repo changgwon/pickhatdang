@@ -10,12 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181224094655) do
-
-  create_table "basketlists", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20181224113327) do
 
   create_table "food_categories", force: :cascade do |t|
     t.string "food_category"
@@ -58,8 +53,7 @@ ActiveRecord::Schema.define(version: 20181224094655) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-  
-  
+
   create_table "recommendeds", force: :cascade do |t|
     t.integer "r_id"
     t.float "rating"
@@ -95,7 +89,7 @@ ActiveRecord::Schema.define(version: 20181224094655) do
     t.integer "pricerange"
     t.integer "opentime"
     t.integer "closingtime"
-    t.integer "rating"
+    t.float "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "waiting"
@@ -115,8 +109,7 @@ ActiveRecord::Schema.define(version: 20181224094655) do
     t.integer "isreserver"
     t.integer "reservedate"
   end
-  
-  
+
   create_table "shopping_bags", force: :cascade do |t|
     t.integer "r_id"
     t.datetime "created_at", null: false
@@ -148,4 +141,3 @@ ActiveRecord::Schema.define(version: 20181224094655) do
   end
 
 end
-

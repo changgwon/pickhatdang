@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
     <title>Untitled15</title>
     <%= csrf_meta_tags %>
 
@@ -9,13 +13,12 @@
   </head>
 
   <body>
-  <%if current_user %>
-  <%=link_to '로그아웃','/users/sign_out',method:'delete' %>
-
-
-  <%=link_to '정보변경','/users/edit' %><br>
-  <%end %>
-
+  <div class="main">
+    <%if current_user %>
+      <div class="logout"><%=link_to image_tag('/logout.svg', size: 25),'/users/sign_out',method:'delete' %></div>
+      <div class="edituser"><%=link_to image_tag('/resume.svg', size: 25),'/users/edit' %></div>
+    <%end %>
+  </div>
     <%= yield %>
   </body>
 </html>

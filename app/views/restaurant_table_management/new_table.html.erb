@@ -1,10 +1,24 @@
-<%= form_for @table, url:"/restaurant_table_management/create_table/#{@table.restaurant_id}",method: "post" do |f| %>
-  테이블 번호 : <%=f.text_field :table_num %><br>
-  좌석수 : <%=f.text_field :nseats %><br>
-  착석여부 : <%=f.text_field :be_seated %><br>
-  위치  : <%=f.text_field :location %><br>
-  <%= f.submit "save" %>
+<!DOCTYPE html>
+<html>
+<head>
 
+  <link rel="stylesheet" type="text/css" href="/assets/new.scss">
+  <style>
+  </style>
+</head>
+
+<div class="PageTitle"><h1>Register New Table</h1></div>
+
+<%= form_for @table, url:"/restaurant_table_management/create_table/#{@table.restaurant_id}",method: "post" do |f| %>
+  <div class="new">
+    <div class="tnum">테이블 번호 : <%=f.text_field :table_num %></div>
+    <div class="nseats">좌석수 : <%=f.text_field :nseats %></div>
+    <div class="seated">착석여부 : <%=f.text_field :be_seated %></div>
+    <div class="tlocation">위치  : <%=f.text_field :location %></div>
+
+  </div>
+  <br><br>
+  <div class="button"><%= f.submit "save" %></div>
 <% end %>
 
 

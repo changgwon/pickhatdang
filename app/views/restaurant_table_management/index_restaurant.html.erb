@@ -1,4 +1,22 @@
-<h1>Restaurants</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/assets/Index.scss">
+  <style>
+    table {
+      width: 100%;
+      border-top: 1px solid #444444;
+      border-collapse: collapse;
+    }
+    th, td {
+      border-bottom: 1px solid #444444;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<div class="IndexName"><h1>Restaurants</h1></div>
 
 <table>
   <thead>
@@ -12,13 +30,16 @@
 
   <tbody>
   <% @restaurants.each do |restaurant| %>
+
     <tr>
-      <td><%= restaurant.name %></td>
-      <td><%= restaurant.location %></td>
-      <td><%= restaurant.genre %></td>
-      <td><%= link_to '테이블 보기', "/restaurant_table_management/index_table/#{restaurant.id}" %></td>
-      <td><%= link_to '식당정보변경', "/restaurant_table_management/edit_restaurant/#{restaurant.id}" %></td>
-      <td><%= link_to '식당삭제', "/restaurant_table_management/delete_restaurant/#{restaurant.id}",method:'delete' %></td>
+      <div class="rtable">
+        <div class="rname"><td><%= restaurant.name %></td></div>
+        <div class="rlocation"><td><%= restaurant.location %></td></div>
+        <div class="rgenre"><td><%= restaurant.genre %></td></div>
+        <div class="gotable"><td><%= link_to image_tag('/table-grid.svg', size: 25), "/restaurant_table_management/index_table/#{restaurant.id}" %></td></div>
+        <div class="rupdate"><td><%= link_to image_tag('/edit.svg', size: 25), "/restaurant_table_management/edit_restaurant/#{restaurant.id}" %></td></div>
+        <div class="rdelete"><td><%= link_to image_tag('/delete.svg', size: 25), "/restaurant_table_management/delete_restaurant/#{restaurant.id}",method:'delete' %></td></div>
+      </div>
   <% end %>
   </tbody>
 </table>
