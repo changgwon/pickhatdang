@@ -1,0 +1,7 @@
+<h1>예약목록</h1>
+<% @reservations.each do |reservation| %>
+  <%= reservation.restaurant_name%>
+  <%= reservation.ncustomer %>
+  <a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a>
+  <a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a><br>
+<%end%>

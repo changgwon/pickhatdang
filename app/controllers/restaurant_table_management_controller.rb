@@ -1,14 +1,14 @@
 class RestaurantTableManagementController < ApplicationController
 
-  before_action :authenticate_user!
-  def home
-    if current_user.user_type==1
-      redirect_to '/restaurant_table_management/index_restaurant'
-    else
-      redirect_to '/restaurant_recommendation/my_page'
-  end
+    before_action :authenticate_user!
+    def home
+      if current_user.user_type==1
+        redirect_to '/restaurant_table_management/index_restaurant'
+      else
+        redirect_to '/restaurant_recommendation/my_page'
+      end
 
-  end
+    end
 
   def new_restaurant
     @restaurant = Restaurant.new
