@@ -1,4 +1,23 @@
-<h1>Tables</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/assets/Index.scss">
+  <style>
+    table {
+      width: 100%;
+      border-top: 1px solid #444444;
+      border-collapse: collapse;
+    }
+    th, td {
+      border-bottom: 1px solid #444444;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<div class="IndexName"><h1>Tables</h1></div>
+
 <table>
   <thead>
   <tr>
@@ -16,9 +35,9 @@
       <td><%= table.table_num %></td>
       <td><%= table.nseats %></td>
       <td><%= table.be_seated %></td>
-      <td><%= link_to '스케쥴 보기', "/restaurant_table_management/index_schedule/#{@restaurant.id}/#{table.id}" %></td>
-      <td><%= link_to '착석',"/restaurant_table_management/seated/#{table.id}",method: 'patch' %></td>
-      <td><%= link_to '퇴장',"/restaurant_table_management/out/#{table.id}",method: 'patch' %></td>
+      <td><%= link_to image_tag('/calendar.svg', size: 25), "/restaurant_table_management/index_schedule/#{@restaurant.id}/#{table.id}" %></td>
+      <td><%= link_to image_tag('/waiting-room.svg', size: 25),"/restaurant_table_management/seated/#{table.id}",method: 'patch' %></td>
+      <td><%= link_to image_tag('/chair.svg', size: 25),"/restaurant_table_management/out/#{table.id}",method: 'patch' %></td>
 
   <% end %>
   </tbody>

@@ -39,7 +39,7 @@ class RestaurantTableManagementController < ApplicationController
 
   def index_table
     @tables = Table.read_table(params[:restaurant_id])
-    @restaurant=Table.find(params[:restaurant_id])
+    @restaurant=Restaurant.find(params[:restaurant_id])
   end
 
   def new_table
@@ -116,6 +116,9 @@ class RestaurantTableManagementController < ApplicationController
   end
   def schedule_params
     params.require(:schedule).permit(:ncustomer, :starttime, :endtime,:reservestatus,:reservetime,:isreserver, :user_id)
+  end
+
+  def flex;
   end
 
 

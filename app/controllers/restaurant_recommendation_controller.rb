@@ -70,4 +70,7 @@ class RestaurantRecommendationController < ApplicationController
     params.require(:priority).permit(:distance, :price, :rating,:waiting)
   end
 
+  def flex;
+  end
+
 end

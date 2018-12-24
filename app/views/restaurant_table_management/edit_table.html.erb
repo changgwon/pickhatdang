@@ -1,9 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="/assets/new.scss">
+  <style>
+
+  </style>
+</head>
+
+<div class="PageTitle"><h1>Edit Table</h1></div>
 <%= form_for @table, url:"/restaurant_table_management/update_table/#{@table.restaurant_id}",method: "patch" do |f| %>
-  테이블 번호 : <%=f.text_field :table_num %><br>
-  좌석수 : <%=f.text_field :nseats %><br>
+  <div class="new">
+    <div class="tnum">테이블 번호 : <%=f.text_field :table_num %></div>
+    <div class="nseats">좌석수 : <%=f.text_field :nseats %></div>
 
-  <%= f.submit "save" %>
 
+  </div>
+  <div class="button"><%= f.submit "save" %></div>
 <% end %>
 
 
