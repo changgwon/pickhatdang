@@ -1,0 +1,10 @@
+<h1>예약하기</h1>
+<form action = "/restaurant_reservation/create_schedule/<%=@restaurant.id%>" method="post">
+
+  인원 : <input type="text" name="ncustomer"><br>
+  날짜 : <input type="text" name="reservedate"><br>
+  시간 : <input type="text" name="reservetime"><br>
+  테이블 : <input type="text" name="table_num"><br><br>
+
+  <input type="submit" value="예약접수">
+</form>

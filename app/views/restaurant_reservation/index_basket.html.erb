@@ -1,0 +1,6 @@
+<h1>장바구니</h1>
+<%@restaurants.each do |restaurant| %>
+  <%=restaurant.name%>
+  <a href="/restaurant_reservation/restaurantInfo/<%=restaurant.id%>">[조회]</a>
+
+<% end %>
