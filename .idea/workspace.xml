@@ -1,129 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c96c386f-c1d1-4dec-b2d6-a8be79c0a5ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/untitled15.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled15.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/restaurant_table_management_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/restaurant_table_management_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/application_record.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/application_record.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/food_category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/food_category.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/location_category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/location_category.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/location_division.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/location_division.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/priority.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/priority.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/recommendation_system.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/recommendation_system.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/restaurant.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/restaurant.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/schedule.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/schedule.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/table.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/table.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/email_changed.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/email_changed.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/password_change.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/password_change.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_recommendation/my_page.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_recommendation/my_page.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_recommendation/priority_setting.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_recommendation/priority_setting.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_recommendation/search_food_category.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_recommendation/search_food_category.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_recommendation/search_location_category.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_recommendation/search_location_category.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_recommendation/search_location_division.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_recommendation/search_location_division.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_recommendation/search_setting.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_recommendation/search_setting.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_table_management/edit_restaurant.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_table_management/edit_restaurant.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_table_management/edit_schedule.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_table_management/edit_schedule.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_table_management/edit_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_table_management/edit_table.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_table_management/index_restaurant.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_table_management/index_restaurant.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_table_management/index_schedule.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_table_management/index_schedule.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_table_management/index_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_table_management/index_table.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_table_management/new_restaurant.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_table_management/new_restaurant.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_table_management/new_schedule.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_table_management/new_schedule.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restaurant_table_management/new_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restaurant_table_management/new_table.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bundle" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bundle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/rails" beforeDir="false" afterPath="$PROJECT_DIR$/bin/rails" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/rake" beforeDir="false" afterPath="$PROJECT_DIR$/bin/rake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/setup" beforeDir="false" afterPath="$PROJECT_DIR$/bin/setup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/update" beforeDir="false" afterPath="$PROJECT_DIR$/bin/update" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/yarn" beforeDir="false" afterPath="$PROJECT_DIR$/bin/yarn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.ru" beforeDir="false" afterPath="$PROJECT_DIR$/config.ru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/boot.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/boot.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/cable.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/application_controller_renderer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/application_controller_renderer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/cookies_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/cookies_serializer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/inflections.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/locales/devise.en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/devise.en.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/locales/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/en.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/puma.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/puma.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/secrets.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/secrets.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181124050438_devise_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181124050438_devise_create_users.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181124050943_create_restaurants.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181124050943_create_restaurants.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181124050958_create_tables.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181124050958_create_tables.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181124051018_create_schedules.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181124051018_create_schedules.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181124070457_add_column_to_table.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181124070457_add_column_to_table.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181124103406_change_column_to_schedule.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181124103406_change_column_to_schedule.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181203112050_create_priorities.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181203112050_create_priorities.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181203124138_create_location_categories.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181203124138_create_location_categories.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181203124157_create_location_divisions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181203124157_create_location_divisions.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181203124214_create_food_categories.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181203124214_create_food_categories.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181203130844_create_recommendation_systems.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181203130844_create_recommendation_systems.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181203160235_change_column_to_location_division.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181203160235_change_column_to_location_division.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181203174058_change_column_to_recommendation_system.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181203174058_change_column_to_recommendation_system.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181204112703_change_created_at.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181204112703_change_created_at.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181205062218_add_col_to_schedule.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181205062218_add_col_to_schedule.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/422.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/422.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/application_system_test_case.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/application_system_test_case.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/dataset_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/dataset_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/restaurant_recommendation_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/restaurant_recommendation_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/restaurant_table_management_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/restaurant_table_management_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/food_categories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/food_categories.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/location_categories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/location_categories.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/location_divisions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/location_divisions.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/priorities.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/priorities.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/recommendation_systems.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/recommendation_systems.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/restaurants.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/restaurants.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/schedules.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/schedules.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/tables.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/tables.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/food_category_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/food_category_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/location_category_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/location_category_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/location_division_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/location_division_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/priority_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/priority_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/recommendation_system_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/recommendation_system_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/restaurant_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/restaurant_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/schedule_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/schedule_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/table_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/table_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/user_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/user_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_helper.rb" afterDir="false" />
-    </list>
+    <list default="true" id="c96c386f-c1d1-4dec-b2d6-a8be79c0a5ff" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,20 +24,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/restaurant_reservation_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-798">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="1235">
+              <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/restaurant_table_management_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" selection-start-line="10" selection-end-line="11" />
+            <state relative-caret-position="266">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -315,7 +193,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="357" />
     <option name="width" value="1064" />
     <option name="height" value="1070" />
@@ -521,12 +399,12 @@
       <workItem from="1545540230627" duration="792000" />
       <workItem from="1545541197760" duration="22536000" />
       <workItem from="1545613687943" duration="2872000" />
-      <workItem from="1545619581772" duration="24720000" />
+      <workItem from="1545619581772" duration="25511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117357000" />
+    <option name="totallyTimeSpent" value="118148000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -538,9 +416,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="286" y="0" width="851" height="856" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49784482" visible="true" weight="0.1885906" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49784482" visible="true" weight="0.3552465" />
       <window_info id="Structure" order="1" sideWeight="0.5021552" side_tool="true" weight="0.24974412" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -553,7 +431,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4965326" visible="true" weight="0.27801418" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4965326" visible="true" weight="0.27109268" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5034674" side_tool="true" weight="0.27833572" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32859176" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -861,17 +739,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/restaurant_reservation_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/restaurant_table_management_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-798">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="266">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/restaurant_table_management_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/restaurant_reservation_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="11" />
+        <state relative-caret-position="1235">
+          <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
         </state>
       </provider>
     </entry>
