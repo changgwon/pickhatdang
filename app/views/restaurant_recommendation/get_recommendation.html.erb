@@ -1,0 +1,32 @@
+<h1>추천 목록</h1>
+
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Genre</th>
+    <th>Price</th>
+    <th>Rating</th>
+    <th>Waiting</th>
+    <th>Score</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @sorted_r.each do |r| %>
+  <% recommend_r=Restaurant.find(r.r_id) %>
+    <tr>
+      <td><%= recommend_r.name %></td>
+      <td><%= recommend_r.location %></td>
+      <td><%= recommend_r.genre %></td>
+      <td><%= recommend_r.pricerange %></td>
+      <td><%= recommend_r.rating %></td>
+      <td><%= recommend_r.waiting %></td>
+      <td><%= r.score.round(2) %></td>
+      <td><%= link_to '장바구니 담기', "/restaurant_recommendation/add_to_shopping_bag/#{r.r_id}" %></td>
+  <% end %>
+  </tbody>
+</table>
