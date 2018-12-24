@@ -8,6 +8,47 @@ class RestaurantRecommendationController < ApplicationController
     recommendation_system.save
       end
   end
+  def get_recommendation
+    if current_user.priorities.first == nil
+      redirect_to '/restaurant_recommendation/priority_setting'
+    else
+      @priority=current_user.priorities.first
+      Restaurant.all.each do |r|
+        if Recommended.exists?(:user_id=>current_user.id,:r_id=>r.id)
+         @recommended=Recommended.where("user_id = ? AND r_id = ?" , current_user.id, r.id).last
+        else
+          @recommended=Recommended.new
+          @recommended.user_id=current_user.id
+          @recommended.r_id=r.id
+        end
+        @recommended.rating=Math.exp(-0.1*((r.rating-5)**2))*5
+        @recommended.waiting=Math.exp(-0.001*(r.waiting**2.5))*5
+        @recommended.price=Math.exp(-0.0007*((r.pricerange-4000)/200)**2)*5
+        puts @recommended.rating
+        @recommended.score=(@recommended.rating*@priority.rating+@recommended.price*@priority.price+@recommended.waiting*@priority.waiting)/(@priority.rating+@priority.waiting+@priority.price)
+        @recommended.save
+      end
+      # Recommended.order('id ASC').reorder('score desc')
+      @user_recommended=Recommended.where(user_id:current_user.id)
+      @sorted_r=@user_recommended.sort_by { |e| -e[:score] }
+      end
+  end
+  def add_to_shopping_bag
+    if !ShoppingBag.exists?(:user_id=>current_user.id,:r_id=>params[:restaurant_id])
+      @shopping_bag=ShoppingBag.new
+      @shopping_bag.user_id=current_user.id
+      @shopping_bag.r_id=params[:restaurant_id]
+      @shopping_bag.save
+    end
+    redirect_to '/restaurant_recommendation/get_recommendation'
+  end
+  def get_shopping_bag
+    @shopping_bag = ShoppingBag.read_shopping_bag(current_user.id)
+  end
+  def remove_from_shopping_bag
+    ShoppingBag.delete_restaurant(current_user.id,params[:restaurant_id])
+    redirect_to '/restaurant_recommendation/get_shopping_bag'
+  end
   def priority_setting
     if current_user.priorities.first.nil?
       @priority=Priority.new
@@ -22,8 +63,6 @@ class RestaurantRecommendationController < ApplicationController
     recommendation_system= RecommendationSystem.new(priority_params)
     recommendation_system.user_id=current_user.id
     recommendation_system.save
-
-
     redirect_to '/'
   end
   def update_priority

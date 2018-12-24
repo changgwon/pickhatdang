@@ -58,6 +58,18 @@ ActiveRecord::Schema.define(version: 20181224094655) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+  
+  
+  create_table "recommendeds", force: :cascade do |t|
+    t.integer "r_id"
+    t.float "rating"
+    t.integer "waiting"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "score"
+    t.integer "user_id"
+    t.float "price"
+  end
 
   create_table "reservations", force: :cascade do |t|
     t.integer "user_id"
@@ -86,6 +98,7 @@ ActiveRecord::Schema.define(version: 20181224094655) do
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "waiting"
   end
 
   create_table "schedules", force: :cascade do |t|
@@ -101,6 +114,14 @@ ActiveRecord::Schema.define(version: 20181224094655) do
     t.integer "user_id"
     t.integer "isreserver"
     t.integer "reservedate"
+  end
+  
+  
+  create_table "shopping_bags", force: :cascade do |t|
+    t.integer "r_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "tables", force: :cascade do |t|
@@ -127,3 +148,4 @@ ActiveRecord::Schema.define(version: 20181224094655) do
   end
 
 end
+
