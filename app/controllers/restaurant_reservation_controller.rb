@@ -89,6 +89,7 @@ class RestaurantReservationController < ApplicationController
     redirect_to '/restaurant_reservation/index_reservation'
   end
 
+
   private
   # def schedule_params
   #   params.require(:schedule).permit(:ncustomer, :reservetime, :table_id)

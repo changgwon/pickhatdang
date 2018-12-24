@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 20181224094655) do
     t.integer "ncustomer"
     t.integer "starttime"
     t.integer "endtime"
-    t.string "reservestatus"
+    t.string "reservestatus", default: "0"
     t.integer "reservetime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -107,7 +107,7 @@ ActiveRecord::Schema.define(version: 20181224094655) do
     t.integer "ncustomer"
     t.datetime "starttime"
     t.datetime "endtime"
-    t.string "reservestatus"
+    t.string "reservestatus", default: "0"
     t.integer "reservetime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
