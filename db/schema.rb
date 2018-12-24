@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181224094655) do
+ActiveRecord::Schema.define(version: 20181224113327) do
 
   create_table "basketlists", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20181224094655) do
     t.integer "ncustomer"
     t.integer "starttime"
     t.integer "endtime"
-    t.string "reservestatus"
+    t.string "reservestatus", default: "0"
     t.integer "reservetime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(version: 20181224094655) do
     t.integer "ncustomer"
     t.datetime "starttime"
     t.datetime "endtime"
-    t.string "reservestatus"
+    t.string "reservestatus", default: "0"
     t.integer "reservetime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
