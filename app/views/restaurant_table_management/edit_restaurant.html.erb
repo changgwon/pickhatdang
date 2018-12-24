@@ -1,7 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="/assets/new.scss">
+  <style>
+  </style>
+</head>
+
+<div class="PageTitle"><h1>Edit Restaurant</h1></div>
+
 <%= form_for @restaurant, url:"/restaurant_table_management/update_restaurant/#{@restaurant.id}", method: 'patch' do |f| %>
-  레스토랑 이름 : <%=f.text_field :name %><br>
-  장소 : <%=f.text_field :location %><br>
-  장르 : <%=f.text_field :genre %><br>
-  <%= f.submit %>
+  <div class="new">
+    <div class="name">레스토랑 이름 : <%=f.text_field :name %></div>
+    <div class="location">장소 : <%=f.text_field :location %></div>
+    <div class="genre">장르 : <%=f.text_field :genre %></div>
+
+  </div>
+  <div class="button"><%= f.submit %></div>
 
 <% end %>

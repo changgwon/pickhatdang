@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.PageTitle{
+  padding: 20px;
+  color: #fff;
+  background-color: #fd4c4e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.new{
+  padding: 20px 10px;
+  background-color: #fbb1b2; /*strawberry pink*/
+  display: flex;
+  justify-content: space-around;
+}
+.button{
+  display: flex;
+  justify-content: center;
+}

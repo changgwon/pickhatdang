@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 나눔스퀘어OTF;
+}
+.main{
+    padding: 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.logout{
+    display: flex;
+    justify-content: space-around;
+}
+.edituser{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 10px;
+}
