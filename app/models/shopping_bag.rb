@@ -1,6 +1,12 @@
 class ShoppingBag < ApplicationRecord
   belongs_to :user
 
+  def self.create_shopping_bag(user_id, restaurant_id)
+    @shopping_bag=ShoppingBag.new
+    @shopping_bag.user_id=user_id
+    @shopping_bag.r_id=restaurant_id
+    @shopping_bag.save
+  end
 
   def self.read_shopping_bag(user_id)
     return ShoppingBag.where("user_id = ?",user_id)
