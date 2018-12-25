@@ -1,13 +1,13 @@
-<h2>Sign up</h2>
+<div class="PageTitle"><h2>픽!했당 Sign up</h2></div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
+<div class="login">
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
-
+<br><br>
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
@@ -15,19 +15,21 @@
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
-
+<br><br>
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
+  <br><br>
   <div class="field">
     <%= f.label :user_type %><br />
     <%= f.text_field :user_type %>
   </div>
-
-  <div class="actions">
+<br><br>
+  <div class="button">
     <%= f.submit "Sign up" %>
   </div>
+</div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="field2"><%= render "devise/shared/links" %></div>

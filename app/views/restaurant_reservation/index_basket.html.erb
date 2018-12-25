@@ -2,14 +2,16 @@
 <html>
 <head>
 
-  <link rel="stylesheet" type="text/css" href="/assets/new.scss">
+  <link rel="stylesheet" type="text/css" href="/assets/Index.scss">
   <style>
   </style>
 </head>
 
-<div class="PageTitle"><h1>장바구니</h1></div>
-<%@restaurants.each do |restaurant| %>
-  <%=restaurant.name%>
-  <a href="/restaurant_reservation/restaurantInfo/<%=restaurant.id%>">[조회]</a>
+<div class="IndexName"><h1>장바구니</h1></div>
 
+<%@restaurants.each do |restaurant| %>
+<div class="all">
+  <div class="my_restaurant"><%=restaurant.name%></div>
+  <div class="link"><a href="/restaurant_reservation/restaurantInfo/<%=restaurant.id%>">[조회]</a></div>
+</div>
 <% end %>
