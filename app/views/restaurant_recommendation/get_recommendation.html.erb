@@ -18,15 +18,30 @@
   <tbody>
   <% @sorted_r.each do |r| %>
   <% recommend_r=Restaurant.find(r.r_id) %>
-    <tr>
-      <td><%= recommend_r.name %></td>
-      <td><%= recommend_r.location %></td>
-      <td><%= recommend_r.genre %></td>
-      <td><%= recommend_r.pricerange %></td>
-      <td><%= recommend_r.rating %></td>
-      <td><%= recommend_r.waiting %></td>
-      <td><%= r.score.round(2) %></td>
-      <td><%= link_to '장바구니 담기', "/restaurant_recommendation/add_to_shopping_bag/#{r.r_id}" %></td>
+    <% if recommend_r.genre == @recommendation_system.food_category %>
+      <% flag = 0 %>
+      <% @recommendation_system.location_division.each do |l| %>
+        <% if recommend_r.location == l %>
+          <% flag = 1 %>
+        <% end %>
+      <% end %>
+      <% if flag == 1 %>
+        <tr>
+        <td><%= recommend_r.name %></td>
+        <td><%= recommend_r.location %></td>
+        <td><%= recommend_r.genre %></td>
+        <td><%= recommend_r.pricerange %></td>
+        <td><%= recommend_r.rating %></td>
+        <td><%= recommend_r.waiting %></td>
+        <td><%= r.score.round(2) %></td>
+        <td><%= link_to '장바구니에 담기', "/restaurant_recommendation/add_to_shopping_bag/#{r.r_id}" %></td>
+      <% end %>
+    <% end %>
   <% end %>
   </tbody>
 </table>
+
+<br>
+<br>
+
+<a href="/restaurant_recommendation/my_page">[BACK]</a>
