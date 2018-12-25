@@ -1,11 +1,21 @@
 class RestaurantRecommendationController < ApplicationController
   before_action :authenticate_user!
   def my_page
+    Priority.create(current_user)
     if current_user.recommendation_systems.first!=nil
     recommendation_system=current_user.recommendation_systems.first
     recommendation_system.location_division=[]
     recommendation_system.food_category=nil
     recommendation_system.save
+    else
+      @priority=current_user.priorities.first
+      recommendation_system= RecommendationSystem.new
+      recommendation_system.distance=@priority.distance
+      recommendation_system.price=@priority.price
+      recommendation_system.rating=@priority.rating
+      recommendation_system.waiting=@priority.waiting
+      recommendation_system.user_id=current_user.id
+      recommendation_system.save
     end
   end
   def get_recommendation
@@ -32,7 +42,7 @@ class RestaurantRecommendationController < ApplicationController
     redirect_to '/restaurant_recommendation/get_shopping_bag'
   end
   def priority_setting
-    @priority=Priority.create_or_get(current_user)
+    @priority=current_user.priorities.first
   end
   def create_priority
     Priority.create_priority(priority_params,current_user.id)
@@ -52,7 +62,6 @@ class RestaurantRecommendationController < ApplicationController
   end
   def search_location_category
     @locations=LocationCategory.all
-
   end
   def search_location_division
     @locations=LocationDivision.where("location_category_id = ?",params[:category_id])
