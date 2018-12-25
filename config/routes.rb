@@ -44,6 +44,13 @@ Rails.application.routes.draw do
   patch 'restaurant_table_management/out/:table_id' => 'restaurant_table_management#out'
   patch 'restaurant_table_management/start/:schedule_id' => 'restaurant_table_management#start'
   patch 'restaurant_table_management/end/:schedule_id' => 'restaurant_table_management#end'
+  get 'temp/new_division'
+  get 'temp/new_location'
+  get 'temp/new_food'
+  post 'temp/create_division'
+  post 'temp/create_location'
+  post 'temp/create_food'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end

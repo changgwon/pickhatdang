@@ -6,6 +6,6 @@
 <%= form_tag("/restaurant_recommendation/select_location_division", method: "get") do %>
   <%=collection_check_boxes(:location,:locations,@locations,:location,:location) %>
 
-
+<br>
 <%= submit_tag("Search_restaurant") %>
     <% end %>

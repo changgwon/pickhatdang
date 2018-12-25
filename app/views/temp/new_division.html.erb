@@ -1,0 +1,7 @@
+<%= form_for @division, url:"/temp/create_division" do |f| %>
+  <div class="new">
+    <div class="name">서울시 00구 이름 : <%=f.text_field :location %></div>
+  </div>
+  <br><br>
+  <div class="button"><%= f.submit %></div>
+<% end %>
