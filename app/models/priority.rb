@@ -1,13 +1,16 @@
 class Priority < ApplicationRecord
   belongs_to :user
 
-  def self.create_or_get(user)
+  def self.create(user)
     if user.priorities.first.nil?
       @priority=Priority.new
-    else
-      @priority=user.priorities.first
+      @priority.user_id=user.id
+      @priority.rating=1
+      @priority.waiting=1
+      @priority.price=1
+      @priority.distance=1
+      @priority.save
     end
-    return @priority
   end
   def self.create_priority(priority_params,user_id)
     @priority=Priority.new(priority_params)
