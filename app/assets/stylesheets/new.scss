@@ -8,16 +8,36 @@
   color: #fff;
   background-color: #fd4c4e;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .new{
-  padding: 20px 10px;
-  background-color: #fbb1b2; /*strawberry pink*/
+  padding: 100px 10px;
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
+}
+.login{
+  padding: 20px 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .button{
   display: flex;
   justify-content: center;
+}
+.field{
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.field2{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

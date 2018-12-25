@@ -1,4 +1,23 @@
-<h1>추천 목록</h1>
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="/assets/Index.scss">
+  <style>
+    table {
+      width: 100%;
+      border-top: 1px solid #444444;
+      border-collapse: collapse;
+    }
+    th, td {
+      border-bottom: 1px solid #444444;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<div class="IndexName"><h1>추천 목록</h1></div>
 
 
 <table>
@@ -18,6 +37,7 @@
   <tbody>
   <% @sorted_r.each do |r| %>
   <% recommend_r=Restaurant.find(r.r_id) %>
+
     <% if recommend_r.genre == @recommendation_system.food_category %>
       <% flag = 0 %>
       <% @recommendation_system.location_division.each do |l| %>
@@ -34,9 +54,10 @@
         <td><%= recommend_r.rating %></td>
         <td><%= recommend_r.waiting %></td>
         <td><%= r.score.round(2) %></td>
-        <td><%= link_to '장바구니에 담기', "/restaurant_recommendation/add_to_shopping_bag/#{r.r_id}" %></td>
+        <td><%= link_to image_tag('/takeaway.svg'), "/restaurant_recommendation/add_to_shopping_bag/#{r.r_id}" %></td>
       <% end %>
     <% end %>
+
   <% end %>
   </tbody>
 </table>

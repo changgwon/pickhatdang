@@ -2,15 +2,18 @@
 <html>
 <head>
 
-  <link rel="stylesheet" type="text/css" href="/assets/new.scss">
+  <link rel="stylesheet" type="text/css" href="/assets/Index.scss">
   <style>
   </style>
 </head>
 
-<h1>예약목록</h1>
+<div class="IndexName"><h1>예약목록</h1></div>
+
 <% @reservations.each do |reservation| %>
-  <%= reservation.restaurant_name%>
-  <%= reservation.ncustomer %>
-  <a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a>
-  <a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a><br>
+<div class="all">
+  <div class="my_restaurant"><%= reservation.restaurant_name%></div>
+  <div class="my_restaurant"><%= reservation.ncustomer %>명</div>
+  <div class="link"><a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a></div>
+  <div class="link"><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></div>
+</div>
 <%end%>
