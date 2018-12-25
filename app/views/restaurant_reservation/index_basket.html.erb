@@ -1,4 +1,13 @@
-<h1>장바구니</h1>
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="/assets/new.scss">
+  <style>
+  </style>
+</head>
+
+<div class="PageTitle"><h1>장바구니</h1></div>
 <%@restaurants.each do |restaurant| %>
   <%=restaurant.name%>
   <a href="/restaurant_reservation/restaurantInfo/<%=restaurant.id%>">[조회]</a>
