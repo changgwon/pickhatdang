@@ -62,7 +62,6 @@ class RestaurantRecommendationController < ApplicationController
   end
   def search_location_category
     @locations=LocationCategory.all
-
   end
   def search_location_division
     @locations=LocationDivision.where("location_category_id = ?",params[:category_id])
