@@ -1,0 +1,7 @@
+<%= form_for @location, url:"/temp/create_location" do |f| %>
+  <div class="new">
+    <div class="name">00시 이름 : <%=f.text_field :location %></div>
+  </div>
+  <br><br>
+  <div class="button"><%= f.submit %></div>
+<% end %>

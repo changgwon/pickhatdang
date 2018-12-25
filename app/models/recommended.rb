@@ -15,7 +15,7 @@ class Recommended < ApplicationRecord
 
   def self.set_rwp(recommended,rating,waiting,price)
     recommended.rating=Math.exp(-0.1*((rating-5)**2))*5
-    recommended.waiting=Math.exp(-0.001*(waiting**2.5))*5
+    recommended.waiting=Math.exp(-0.0001*(waiting**2.5))*5
     recommended.price=Math.exp(-0.0007*((price-4000)/200)**2)*5
     recommended.save
   end
