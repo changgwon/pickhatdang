@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.IndexName{
+  padding: 20px;
+  color: #fff;
+  background-color: #fd4c4e;
+  display: flex;
+  justify-content: center;
+}
+.button{
+  display: flex;
+  justify-content: center;
+}
+.all{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.my_restaurant{
+  padding-top: 20px;
+  width: 300px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+.link{
+  padding-top: 20px;
+  width: 300px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}

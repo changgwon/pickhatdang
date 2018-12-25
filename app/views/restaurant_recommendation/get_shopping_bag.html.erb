@@ -1,4 +1,23 @@
-<h1>장바구니</h1>
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="/assets/Index.scss">
+  <style>
+    table {
+      width: 100%;
+      border-top: 1px solid #444444;
+      border-collapse: collapse;
+    }
+    th, td {
+      border-bottom: 1px solid #444444;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<div class="IndexName"><h1>장바구니</h1></div>
 
 <table>
   <thead>
@@ -21,7 +40,8 @@
       <td><%= restaurant.genre %></td>
       <td><%= restaurant.pricerange %></td>
       <td><%= restaurant.rating %></td>
-      <td><%= link_to '장바구니 빼기', "/restaurant_recommendation/remove_from_shopping_bag/#{s.r_id}" %></td>
+      <td><%= link_to '장바구니 빼기', "/restaurant_recommendation/remove_from_shopping_bag/#{s.r_id}", style:'color: #fd4c4e' %></td>
+      <td><%= link_to '조회', "/restaurant_reservation/restaurantInfo/#{s.r_id}", style: 'color: #fd4c4e' %></td>
   <% end %>
   </tbody>
 </table>

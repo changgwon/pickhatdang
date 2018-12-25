@@ -1,10 +1,20 @@
-<h1>예약하기</h1>
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="/assets/new.scss">
+  <style>
+  </style>
+</head>
+<div class="PageTitle"><h1>예약하기</h1></div>
+
 <form action = "/restaurant_reservation/create_schedule/<%=@restaurant.id%>" method="post">
-
-  인원 : <input type="text" name="ncustomer"><br>
-  날짜 : <input type="text" name="reservedate"><br>
-  시간 : <input type="text" name="reservetime"><br>
-  테이블 : <input type="text" name="table_num"><br><br>
-
-  <input type="submit" value="예약접수">
+  <div class="new">
+    <div class="ncustomer">인원 : <input type="text" name="ncustomer"></div>
+    <div class="reservedate">날짜 : <input type="text" name="reservedate"></div>
+    <div class="reservetime">시간 : <input type="text" name="reservetime"></div>
+    <div class="table_num">테이블 : <input type="text" name="table_num"></div>
+  </div>
+  <br>
+  <div class="button"><input type="submit" value="예약접수"></div>
 </form>

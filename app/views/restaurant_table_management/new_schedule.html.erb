@@ -1,14 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="/assets/new.scss">
+  <style>
+  </style>
+</head>
+
+
+<div class="PageTitle"><h1>Register Schedule</h1></div>
 <%= form_for @schedule, url:"/restaurant_table_management/create_schedule/#{@schedule.restaurant_id}/#{@schedule.table_id}",method: "post" do |f| %>
-  손님 수 : <%=f.text_field :ncustomer %><br>
-  착석 시간 : <%=f.text_field :starttime %><br>
-  퇴장 시간 : <%=f.text_field :endtime %><br>
-  예약상태 : <%=f.text_field :reservestatus %><br>
-  예약시간 : <%=f.text_field :reservetime %><br>
-  예약손님 id : <%=f.text_field :user_id %><br>
+  <div class="new">
+    <div class="ncustomer">손님 수 : <%=f.text_field :ncustomer %></div>
+    <div class="time">착석 시간 : <%=f.text_field :starttime %><br>퇴장 시간 : <%=f.text_field :endtime %><br></div>
+    <div class="state">예약상태 : <%=f.text_field :reservestatus %></div>
+    <div class="rtime">예약시간 : <%=f.text_field :reservetime %></div>
+    <div class="c_id">예약손님 id : <%=f.text_field :user_id %></div>
 
-
-
-  <%= f.submit "save" %>
+  </div>
+  <br><br>
+  <div class="button"><%= f.submit "save" %></div>
 
 <% end %>
-시간은 2018-11-27 04:38:38 형식으로 입력

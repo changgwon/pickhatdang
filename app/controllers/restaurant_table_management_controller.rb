@@ -39,7 +39,7 @@ class RestaurantTableManagementController < ApplicationController
 
   def index_table
     @tables = Table.read_table(params[:restaurant_id])
-    @restaurant=Table.find(params[:restaurant_id])
+    @restaurant=Restaurant.find(params[:restaurant_id])
   end
 
   def new_table
@@ -84,16 +84,6 @@ class RestaurantTableManagementController < ApplicationController
 
   def edit_schedule
     @schedule = Schedule.find(params[:id])
-  end
-
-  def seated
-    Table.seated(params[:table_id])
-    redirect_back(fallback_location: root_path)
-  end
-
-  def out
-    Table.out(params[:table_id])
-    redirect_back(fallback_location: root_path)
   end
 
   def start

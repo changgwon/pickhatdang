@@ -1,3 +1,15 @@
-<h1><%=@restaurant.name %></h1>
-<a href="/restaurant_reservation/index_basket/">장바구니</a>
-<a href="/restaurant_reservation/new_schedule/<%=@restaurant.id %>">즉시예약</a>
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="/assets/Index.scss">
+  <style>
+  </style>
+</head>
+
+<div class="IndexName"><h1><%=@restaurant.name %></h1></div>
+
+<div class="all">
+  <div class="my_restaurant"><a href="/restaurant_reservation/index_basket/"><img src="/takeaway.svg" width="30px" height="30px"></a></div>
+  <div class="link"><a href="/restaurant_reservation/new_schedule/<%=@restaurant.id %>"><img src="/reservation.svg" width="30px" height="30px"></a></div>
+</div>

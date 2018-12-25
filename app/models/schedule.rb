@@ -23,15 +23,20 @@ class Schedule < ApplicationRecord
 
   end
 
+
   def self.start(schedule_id)
-  @schedule=Schedule.find(schedule_id)
-  @schedule.starttime=Time.now.strftime("%H:%M:%S")
-  @schedule.save
+    @schedule=Schedule.find(schedule_id)
+    @schedule.starttime = Time.now
+    @schedule.save
+    table=@schedule.table
+    Table.seated(table.id)
   end
   def self.end(schedule_id)
-  @schedule=Schedule.find(schedule_id)
-  @schedule.endtime=Time.now.strftime("%H:%M:%S")
-  @schedule.save
+    @schedule=Schedule.find(schedule_id)
+    @schedule.endtime = Time.now
+    @schedule.save
+    table=@schedule.table
+    Table.out(table.id)
   end
 
   def self.make_schedule(restaurant_id, table_num, ncustomer, reservedate, reservetime)

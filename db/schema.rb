@@ -12,10 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20181224113327) do
 
-  create_table "basketlists", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "food_categories", force: :cascade do |t|
     t.string "food_category"

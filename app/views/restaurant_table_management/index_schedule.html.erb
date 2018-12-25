@@ -1,4 +1,22 @@
-<h1>Schedules</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/assets/Index.scss">
+  <style>
+    table {
+      width: 100%;
+      border-top: 1px solid #444444;
+      border-collapse: collapse;
+    }
+    th, td {
+      border-bottom: 1px solid #444444;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<div class="IndexName"><h1>Schedules</h1></div>
 <table>
   <thead>
   <tr>
@@ -15,14 +33,14 @@
     <tr>
       <td><%= schedule.ncustomer %></td>
       <%if schedule.starttime ==nil %>
-        <td><%=link_to 'Start Now', "/restaurant_table_management/start/#{schedule.id}",method: 'patch' %></td>
+        <td><%=link_to 'Start Now', "/restaurant_table_management/start/#{schedule.id}",method: 'patch', style: 'color: #fd4c4e' %></td>
       <%else %>
-      <td><%= schedule.starttime %></td>
+      <td><%= schedule.starttime.strftime("%F %T") %></td>
       <%end %>
       <%if schedule.endtime ==nil %>
-        <td><%=link_to 'End Now', "/restaurant_table_management/end/#{schedule.id}" ,method: 'patch'%></td>
+        <td><%=link_to 'End Now', "/restaurant_table_management/end/#{schedule.id}" ,method: 'patch', style: 'color: #fd4c4e'%></td>
       <%else %>
-        <td><%= schedule.endtime %></td>
+        <td><%= schedule.endtime.strftime("%F %T") %></td>
       <%end %>
 
 
@@ -31,10 +49,10 @@
   </tbody>
 </table>
 
+<br><br>
+
+
+
+<div class="button"><%= link_to 'New schedule', "/restaurant_table_management/new_schedule/#{@restaurant.id}/#{@table.id}", style: 'color: #fd4c4e' %></div>
 <br>
-
-
-
-
-<%= link_to 'New schedule', "/restaurant_table_management/new_schedule/#{@restaurant.id}/#{@table.id}" %><br>
-<%= link_to 'Back', "/restaurant_table_management/index_table/#{@restaurant.id}" %>
+<div class="button"><%= link_to 'Back', "/restaurant_table_management/index_table/#{@restaurant.id}", style: 'color: #fd4c4e' %></div>

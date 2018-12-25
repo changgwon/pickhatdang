@@ -6,7 +6,7 @@ class RestaurantRecommendationController < ApplicationController
     recommendation_system.location_division=[]
     recommendation_system.food_category=nil
     recommendation_system.save
-      end
+    end
   end
   def get_recommendation
     if current_user.priorities.first == nil
@@ -15,30 +15,19 @@ class RestaurantRecommendationController < ApplicationController
       @priority=current_user.priorities.first
       Restaurant.all.each do |r|
         if Recommended.exists?(:user_id=>current_user.id,:r_id=>r.id)
-         @recommended=Recommended.where("user_id = ? AND r_id = ?" , current_user.id, r.id).last
+         @recommended=Recommended.read_recommended(current_user.id,r.id)
         else
-          @recommended=Recommended.new
-          @recommended.user_id=current_user.id
-          @recommended.r_id=r.id
+         @recommended=Recommended.create_recommended(current_user.id,r.id)
         end
-        @recommended.rating=Math.exp(-0.1*((r.rating-5)**2))*5
-        @recommended.waiting=Math.exp(-0.001*(r.waiting**2.5))*5
-        @recommended.price=Math.exp(-0.0007*((r.pricerange-4000)/200)**2)*5
-        puts @recommended.rating
-        @recommended.score=(@recommended.rating*@priority.rating+@recommended.price*@priority.price+@recommended.waiting*@priority.waiting)/(@priority.rating+@priority.waiting+@priority.price)
-        @recommended.save
+        Recommended.set_rwp(@recommended,r.rating,r.waiting,r.pricerange)
+        Recommended.calculate_score(@priority,@recommended)
       end
-      # Recommended.order('id ASC').reorder('score desc')
-      @user_recommended=Recommended.where(user_id:current_user.id)
-      @sorted_r=@user_recommended.sort_by { |e| -e[:score] }
+      @sorted_r=Recommended.sort_where(current_user.id)
       end
   end
   def add_to_shopping_bag
     if !ShoppingBag.exists?(:user_id=>current_user.id,:r_id=>params[:restaurant_id])
-      @shopping_bag=ShoppingBag.new
-      @shopping_bag.user_id=current_user.id
-      @shopping_bag.r_id=params[:restaurant_id]
-      @shopping_bag.save
+      ShoppingBag.create_shopping_bag(current_user.id,params[:restaurant_id])
     end
     redirect_to '/restaurant_recommendation/get_recommendation'
   end
@@ -50,24 +39,17 @@ class RestaurantRecommendationController < ApplicationController
     redirect_to '/restaurant_recommendation/get_shopping_bag'
   end
   def priority_setting
-    if current_user.priorities.first.nil?
-      @priority=Priority.new
-    else
-      @priority=current_user.priorities.first
-    end
+    @priority=Priority.create_or_get(current_user)
   end
   def create_priority
-    @priority=Priority.new(priority_params)
-    @priority.user_id=current_user.id
-    @priority.save
+    Priority.create_priority(priority_params,current_user.id)
     recommendation_system= RecommendationSystem.new(priority_params)
     recommendation_system.user_id=current_user.id
     recommendation_system.save
     redirect_to '/'
   end
   def update_priority
-    @priority=current_user.priorities.first
-    @priority.update(priority_params)
+    Priority.update_priority(priority_params,current_user)
     recommendation_system=current_user.recommendation_systems.first
     recommendation_system.update(priority_params)
     redirect_to '/'
