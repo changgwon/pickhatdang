@@ -12,16 +12,9 @@ class RestaurantRecommendationController < ApplicationController
     if current_user.priorities.first == nil
       redirect_to '/restaurant_recommendation/priority_setting'
     else
+      @recommendation_system=current_user.recommendation_systems.first
       @priority=current_user.priorities.first
-      Restaurant.all.each do |r|
-        if Recommended.exists?(:user_id=>current_user.id,:r_id=>r.id)
-         @recommended=Recommended.read_recommended(current_user.id,r.id)
-        else
-         @recommended=Recommended.create_recommended(current_user.id,r.id)
-        end
-        Recommended.set_rwp(@recommended,r.rating,r.waiting,r.pricerange)
-        Recommended.calculate_score(@priority,@recommended)
-      end
+      Recommended.set_recommended(current_user,@recommendation_system,@priority)
       @sorted_r=Recommended.sort_where(current_user.id)
       end
   end

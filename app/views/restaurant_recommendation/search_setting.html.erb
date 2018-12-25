@@ -5,5 +5,5 @@
 현재 지역 :<%=current_user.recommendation_systems.first.location_division %><br>
 현재 음식 :<%=current_user.recommendation_systems.first.food_category %>
 <br>
-<td><%= link_to '선택완료', "" %></td>
+<td><%= link_to '선택완료', "/restaurant_recommendation/get_recommendation" %></td>
 <td><%= link_to '홈으로', "/" %></td>
