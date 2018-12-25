@@ -1,0 +1,7 @@
+<%= form_for @food, url:"/temp/create_food" do |f| %>
+  <div class="new">
+    <div class="name"> 장르 : <%=f.text_field :food_category %></div>
+  </div>
+  <br><br>
+  <div class="button"><%= f.submit %></div>
+<% end %>
