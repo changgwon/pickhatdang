@@ -7,6 +7,7 @@ class RestaurantRecommendationController < ApplicationController
     recommendation_system.food_category=nil
     recommendation_system.save
     end
+    Priority.create(current_user)
   end
   def get_recommendation
     if current_user.priorities.first == nil
@@ -32,7 +33,7 @@ class RestaurantRecommendationController < ApplicationController
     redirect_to '/restaurant_recommendation/get_shopping_bag'
   end
   def priority_setting
-    @priority=Priority.create_or_get(current_user)
+    @priority=current_user.priorities.first
   end
   def create_priority
     Priority.create_priority(priority_params,current_user.id)
