@@ -1,6 +1,7 @@
 class Restaurant < ApplicationRecord
   belongs_to :user
   has_many :tables
+  mount_uploader :img_url, AvatarUploader
 
   def self.read_restaurant(user_id)
    return Restaurant.where("user_id = ?",user_id)

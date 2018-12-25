@@ -41,6 +41,7 @@ class Reservation < ApplicationRecord
     reservation=Reservation.find(reservation_id)
     reservation.reservestatus=2
     reservation.save
+    return reservation
   end
   def self.destroy_reservation(reservation_id)
     reservation=Reservation.find(reservation_id)

@@ -49,7 +49,12 @@ class RestaurantReservationController < ApplicationController
   end
 
   def index_reservation
-    @reservations=Reservation.all
+    ##0은 대기
+    @reservations_0=Reservation.where("user_id = ? AND reservestatus= ? ",current_user.id,0)
+    ##1은 승인
+    @reservations_1=Reservation.where("user_id = ? AND reservestatus= ? ",current_user.id,1)
+    ##2는 거절
+    @reservations_2=Reservation.where("user_id = ? AND reservestatus= ? ",current_user.id,2)
   end
 
   def edit_reservation

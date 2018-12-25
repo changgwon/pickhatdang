@@ -37,12 +37,13 @@
         <div class="rname"><td><%= restaurant.name %></td></div>
         <div class="rlocation"><td><%= restaurant.location %></td></div>
         <div class="rgenre"><td><%= restaurant.genre %></td></div>
+
         <div class="gotable"><td><%= link_to "테이블보기", "/restaurant_table_management/index_table/#{restaurant.id}", style: 'color: #fd4c4e' %></td></div>
         <div class="rupdate"><td><%= link_to image_tag('/edit.svg', size: 25), "/restaurant_table_management/edit_restaurant/#{restaurant.id}" %></td></div>
         <div class="rdelete"><td><%= link_to image_tag('/delete.svg', size: 25), "/restaurant_table_management/delete_restaurant/#{restaurant.id}",method:'delete' %></td></div>
         <td><%= link_to '예약내역', "/restaurant_reservation/index_reserve_management/#{restaurant.id}" %></td>
       </div>
-
+      <%#= image_tag restaurant.img_url  %>
   <% end %>
   </tbody>
 </table>
