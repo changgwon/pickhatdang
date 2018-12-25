@@ -19,6 +19,7 @@
       <td><%= link_to '테이블 보기', "/restaurant_table_management/index_table/#{restaurant.id}" %></td>
       <td><%= link_to '식당정보변경', "/restaurant_table_management/edit_restaurant/#{restaurant.id}" %></td>
       <td><%= link_to '식당삭제', "/restaurant_table_management/delete_restaurant/#{restaurant.id}",method:'delete' %></td>
+      <td><%= link_to '예약내역', "/restaurant_reservation/index_reserve_management/#{restaurant.id}" %></td>
   <% end %>
   </tbody>
 </table>
