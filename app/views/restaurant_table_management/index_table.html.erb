@@ -36,8 +36,8 @@
       <td><%= table.nseats %></td>
       <td><%= table.be_seated %></td>
       <td><%= link_to image_tag('/calendar.svg', size: 25), "/restaurant_table_management/index_schedule/#{@restaurant.id}/#{table.id}" %></td>
-      <td><%= link_to image_tag('/waiting-room.svg', size: 25),"/restaurant_table_management/seated/#{table.id}",method: 'patch' %></td>
-      <td><%= link_to image_tag('/chair.svg', size: 25),"/restaurant_table_management/out/#{table.id}",method: 'patch' %></td>
+<!--      <td><%#= link_to image_tag('/waiting-room.svg', size: 25),"/restaurant_table_management/seated/#{table.id}",method: 'patch' %></td>-->
+<!--      <td><%#= link_to image_tag('/chair.svg', size: 25),"/restaurant_table_management/out/#{table.id}",method: 'patch' %></td>-->
 
   <% end %>
   </tbody>

@@ -86,16 +86,6 @@ class RestaurantTableManagementController < ApplicationController
     @schedule = Schedule.find(params[:id])
   end
 
-  def seated
-    Table.seated(params[:table_id])
-    redirect_back(fallback_location: root_path)
-  end
-
-  def out
-    Table.out(params[:table_id])
-    redirect_back(fallback_location: root_path)
-  end
-
   def start
     Schedule.start(params[:schedule_id])
     redirect_back(fallback_location: root_path)
