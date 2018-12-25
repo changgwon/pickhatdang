@@ -1,6 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
 
-<td><%= link_to '우선순위 관리', "/restaurant_recommendation/priority_setting" %></td>
-<td><%= link_to '레스토랑 검색', "/restaurant_recommendation/search_setting" %></td>
-<td><%= link_to '추천 받기', "/restaurant_recommendation/get_recommendation" %></td>
-<td><%= link_to '장바구니', "/restaurant_recommendation/get_shopping_bag" %></td>
-
+  <link rel="stylesheet" type="text/css" href="/assets/mypage.scss">
+  <style>
+  </style>
+</head>
+<div class="welcome"><h1>'Welcome To 픽!했당'</h1></div>
+<div class="Manage_me">
+  <div class="priority"><td><%= link_to '우선순위 관리', "/restaurant_recommendation/priority_setting" %></td></div>
+  <div class="rsearch"><td><%= link_to '레스토랑 검색', "/restaurant_recommendation/search_setting" %></td></div>
+  <div class="recommend"><td><%= link_to '추천 받기', "/restaurant_recommendation/get_recommendation" %></td></div>
+  <div class="bag"><td><%= link_to '장바구니', "/restaurant_recommendation/get_shopping_bag" %></td></div>
+</div>

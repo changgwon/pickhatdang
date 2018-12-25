@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="/assets/new.scss">
+  <style>
+  </style>
+</head>
+
 <h1>예약하기</h1>
 <%= form_for @reservation, url:"/restaurant_reservation/update_reservation/#{@reservation.id}", method: 'patch' do |f| %>
   인원 :<%=f.text_field :ncustomer%><br>
