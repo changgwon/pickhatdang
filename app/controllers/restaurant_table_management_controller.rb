@@ -93,6 +93,7 @@ class RestaurantTableManagementController < ApplicationController
 
   def end
     Schedule.end(params[:schedule_id])
+
     redirect_back(fallback_location: root_path)
   end
 

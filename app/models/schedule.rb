@@ -37,6 +37,16 @@ class Schedule < ApplicationRecord
     @schedule.save
     table=@schedule.table
     Table.out(table.id)
+    # 총 식사테이블과 총 식사시간 저장
+    puts @schedule.starttime
+    mealtime=TimeDifference.between(@schedule.starttime,@schedule.endtime).in_minutes
+    restuarant=Restaurant.where('id=?',table.restaurant_id).first
+    restuarant.total_table=restuarant.total_table+1
+    restuarant.total_time=restuarant.total_time+mealtime
+    #### 대기시간 ####
+    restuarant.waiting=restuarant.total_time/restuarant.total_table
+    #### 대기시간 ####
+    restuarant.save
   end
 
   def self.make_schedule(restaurant_id, table_num, ncustomer, reservedate, reservetime)
@@ -48,7 +58,6 @@ class Schedule < ApplicationRecord
     reservation.reservedate=reservedate
     reservation.reservetime=reservetime
     reservation.save
-
     return reservation
   end
 
