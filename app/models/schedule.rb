@@ -38,4 +38,39 @@ class Schedule < ApplicationRecord
     table=@schedule.table
     Table.out(table.id)
   end
+
+  def self.make_schedule(restaurant_id, table_num, ncustomer, reservedate, reservetime)
+    reservation=Schedule.new
+    @table=Table.where("restaurant_id = ? AND table_num = ? ",restaurant_id,table_num)
+    reservation.ncustomer=ncustomer
+    reservation.table_id=@table.first.id
+    reservation.restaurant_id=Restaurant.find(restaurant_id).id
+    reservation.reservedate=reservedate
+    reservation.reservetime=reservetime
+    reservation.save
+
+    return reservation
+  end
+
+  def self.change_schedule(schedule_id, reservation_ncustomer, reservation_reservetime, reservation_reservedate, table)
+    reservation=Schedule.find(schedule_id)
+    reservation.ncustomer=reservation_ncustomer
+    reservation.table_id=table.first.id
+    reservation.reservetime=reservation_reservetime
+    reservation.reservedate=reservation_reservedate
+    reservation.save
+  end
+
+  def self.accept_reservation(reservation_schedule_id)
+    schedule=Schedule.find(reservation_schedule_id)
+    schedule.reservestatus=1
+    schedule.save
+  end
+
+  def self.reject_reservation(reservation_schedule_id)
+    schedule=Schedule.find(reservation_schedule_id)
+    schedule.reservestatus=2
+    schedule.save
+  end
+
 end
