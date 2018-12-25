@@ -35,12 +35,12 @@
       <%if schedule.starttime ==nil %>
         <td><%=link_to 'Start Now', "/restaurant_table_management/start/#{schedule.id}",method: 'patch' %></td>
       <%else %>
-      <td><%= schedule.starttime %></td>
+      <td><%= schedule.starttime.strftime("%F %T") %></td>
       <%end %>
       <%if schedule.endtime ==nil %>
         <td><%=link_to 'End Now', "/restaurant_table_management/end/#{schedule.id}" ,method: 'patch'%></td>
       <%else %>
-        <td><%= schedule.endtime %></td>
+        <td><%= schedule.endtime.strftime("%F %T") %></td>
       <%end %>
 
 
