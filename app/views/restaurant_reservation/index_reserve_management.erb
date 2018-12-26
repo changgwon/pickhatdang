@@ -1,18 +1,32 @@
-<h1>예약 신청 내역</h1>
-  <%@reservations.each do |reservation| %>
-  Table ID : <%=reservation.table_id %>
-  인원 : <%=reservation.ncustomer %>
-  예약날짜 : <%=reservation.reservedate %>
-  예약시간 : <%=reservation.reservetime %>
+<!DOCTYPE html>
+<html>
+<head>
 
-  <a href="/restaurant_reservation/accept_reservation/<%=reservation.id %>">승인</a>
-  <a href="/restaurant_reservation/reject_reservation/<%=reservation.id %>">거절</a><br><br>
+  <link rel="stylesheet" type="text/css" href="/assets/Index.scss">
+  <style>
+  </style>
+</head>
+
+<div class="IndexName"><h1>예약 내역 관리</h1></div>
+<div class="subindex">예약 신청 내역</div>
+  <%@reservations.each do |reservation| %>
+<div class="all">
+  <div class="tabledID">Table ID : <%=reservation.table_id %></div>
+  <div class="ncustomer">인원 : <%=reservation.ncustomer %></div>
+  <div class="reservedate">예약날짜 : <%=reservation.reservedate %></div>
+  <div class="reservetime">예약시간 : <%=reservation.reservetime %></div>
+
+  <div class="link"><a href="/restaurant_reservation/accept_reservation/<%=reservation.id %>">승인</a></div>
+  <div class="link"><a href="/restaurant_reservation/reject_reservation/<%=reservation.id %>">거절</a></div>
+</div>
 <% end %>
 
-<h1>예약 승인 내역</h1>
+<div class="subindex">예약 승인 내역</div>
   <%@accepted_schedules.each do |accepted_schedule| %>
-    Table ID : <%=accepted_schedule.table_id %>
-    인원 : <%=accepted_schedule.ncustomer %>
-    예약날짜 : <%=accepted_schedule.reservedate %>
-    예약시간 : <%=accepted_schedule.reservetime %><br><br>
+<div class="all">
+  <div class="tableID">Table ID : <%=accepted_schedule.table_id %></div>
+  <div class="ncustomer">인원 : <%=accepted_schedule.ncustomer %></div>
+  <div class="reservedate">예약날짜 : <%=accepted_schedule.reservedate %></div>
+  <div class="reservetime">예약시간 : <%=accepted_schedule.reservetime %></div>
+</div>
 <% end %>
