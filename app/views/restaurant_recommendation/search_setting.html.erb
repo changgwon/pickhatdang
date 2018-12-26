@@ -1,9 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
 
-<td><%= link_to '지역선택', "/restaurant_recommendation/search_location_category" %></td>
-<td><%= link_to '음식종류선택', "/restaurant_recommendation/search_food_category" %></td>
-<br>
-현재 지역 :<%=current_user.recommendation_systems.first.location_division %><br>
-현재 음식 :<%=current_user.recommendation_systems.first.food_category %>
-<br>
-<td><%= link_to '선택완료', "/restaurant_recommendation/get_recommendation" %></td>
-<td><%= link_to '홈으로', "/" %></td>
+  <link rel="stylesheet" type="text/css" href="/assets/new.scss">
+  <style>
+  </style>
+</head>
+
+<div class="PageTitle"><h1>Search Restaurant</h1></div><br><br>
+<div class="buttons">
+  <div class="button"><td><%= link_to '지역선택', "/restaurant_recommendation/search_location_category", style: 'color: #fd4c4e' %></td></div>
+  <div class="button"><td><%= link_to '음식종류선택', "/restaurant_recommendation/search_food_category", style: 'color: #fd4c4e' %></td></div>
+</div>
+  <div class="new">
+  <div class="current_location">현재 지역 :<%=current_user.recommendation_systems.first.location_division %></div>
+  <div class="current_food">현재 음식 :<%=current_user.recommendation_systems.first.food_category %></div>
+</div>
+<br><br>
+<div class="button"><td><%= link_to '선택완료', "/restaurant_recommendation/get_recommendation", style: 'color: #fd4c4e' %></td></div>
+<br><br>
+<div class="button"><td><%= link_to '홈으로', "/" %></td></div>

@@ -54,7 +54,7 @@
         <td><%= recommend_r.rating %></td>
         <td><%= recommend_r.waiting %></td>
         <td><%= r.score.round(2) %></td>
-        <td><%= link_to image_tag('/takeaway.svg'), "/restaurant_recommendation/add_to_shopping_bag/#{r.r_id}" %></td>
+        <td><%= link_to image_tag('/takeaway.svg', size: 25), "/restaurant_recommendation/add_to_shopping_bag/#{r.r_id}" %></td>
       <% end %>
     <% end %>
 

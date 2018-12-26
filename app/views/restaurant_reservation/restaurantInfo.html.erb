@@ -8,7 +8,7 @@
 </head>
 
 <div class="IndexName"><h1><%=@restaurant.name %></h1></div>
-<%= image_tag @restaurant.img_url, :size => "260x180" %>
+<div class="picture"><%= image_tag @restaurant.img_url, :size => "260x180" %></div>
 
 <div class="all">
   <div class="my_restaurant"><a href="/restaurant_recommendation/get_shopping_bag"><img src="/takeaway.svg" width="30px" height="30px"></a></div>

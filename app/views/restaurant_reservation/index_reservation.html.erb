@@ -8,7 +8,7 @@
 </head>
 
 <div class="IndexName"><h1>예약목록</h1></div>
-<br>대기 중인 예약 목록 <br>
+<div class="subindex">대기 중인 예약 목록 </div>
 <% @reservations_0.each do |reservation| %>
 <div class="all">
   <div class="my_restaurant"><%= reservation.restaurant_name%></div>
@@ -17,7 +17,7 @@
   <div class="link"><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></div>
 </div>
   <%end %>
-<br>승인 된 예약 목록<br>
+  <div class="subindex">승인 된 예약 목록</div>
 <% @reservations_1.each do |reservation| %>
   <div class="all">
     <div class="my_restaurant"><%= reservation.restaurant_name%></div>
@@ -26,7 +26,7 @@
     <div class="link"><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></div>
   </div>
 <%end%>
-<br>거절 된 예약 목록<br>
+<div class="subindex">거절 된 예약 목록</div>
 <% @reservations_2.each do |reservation| %>
   <div class="all">
     <div class="my_restaurant"><%= reservation.restaurant_name%></div>
