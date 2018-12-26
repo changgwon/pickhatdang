@@ -3,7 +3,9 @@
 실행환경 
 
 운영체제 : window os
+
 사용 언어 : ruby 2.3.3
+
 웹 프레임 워크 : Ruby on Rails 5.1.6.1
 
 Console에 명령어 
