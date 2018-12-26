@@ -9,11 +9,16 @@
 
 <div class="PageTitle"><h1>Edit Restaurant</h1></div>
 
-<%= form_for @restaurant, url:"/restaurant_table_management/update_restaurant/#{@restaurant.id}", method: 'patch' do |f| %>
+<%= form_for @restaurant, url:"/restaurant_table_management/update_restaurant/#{@restaurant.id}",multipart: true , method: 'patch' do |f| %>
   <div class="new">
     <div class="name">레스토랑 이름 : <%=f.text_field :name %></div>
     <div class="location">장소 : <%=f.text_field :location %></div>
     <div class="genre">장르 : <%=f.text_field :genre %></div>
+    <div class="pricerange">가격대: <%=f.text_field :pricerange %></div>
+    <div class="waiting">대기시간: <%=f.text_field :waiting %></div>
+    <div class="image">이미지 : <%=f.file_field :img_url %></div>
+    <div class="image">단면도 : <%=f.file_field :map_url%></div>
+
 
   </div>
   <br>
