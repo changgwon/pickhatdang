@@ -4,18 +4,32 @@
 
   <link rel="stylesheet" type="text/css" href="/assets/new.scss">
   <style>
+    table {
+      width: 100%;
+      border-top: 1px solid #444444;
+      border-collapse: collapse;
+    }
+    th, td {
+      border-bottom: 1px solid #444444;
+      padding: 10px;
+      text-align: center;
+    }
   </style>
 </head>
 
-<div class="PageTitle"><h1>Search Restaurant</h1></div><br><br>
-<div class="buttons">
-  <div class="button"><td><%= link_to '지역선택', "/restaurant_recommendation/search_location_category", style: 'color: #fd4c4e' %></td></div>
-  <div class="button"><td><%= link_to '음식종류선택', "/restaurant_recommendation/search_food_category", style: 'color: #fd4c4e' %></td></div>
-</div>
-  <div class="new">
-  <div class="current_location">현재 지역 :<%=current_user.recommendation_systems.first.location_division %></div>
-  <div class="current_food">현재 음식 :<%=current_user.recommendation_systems.first.food_category %></div>
-</div>
+<div class="PageTitle"><h1>Search Restaurant</h1></div>
+<table>
+  <tbody>
+  <tr>
+      <div class="button"><td><%= link_to '지역선택', "/restaurant_recommendation/search_location_category", style: 'color: #fd4c4e' %></td></div>
+      <div class="button"><td><%= link_to '음식종류선택', "/restaurant_recommendation/search_food_category", style: 'color: #fd4c4e' %></td></div>
+  </tr>
+  <tr>
+      <div class="current_location"><td>현재 지역 :<%=current_user.recommendation_systems.first.location_division %></td></div>
+      <div class="current_food"><td>현재 음식 :<%=current_user.recommendation_systems.first.food_category %></td></div>
+  </tr>
+  </tbody>
+</table>
 <br><br>
 <div class="button"><td><%= link_to '선택완료', "/restaurant_recommendation/get_recommendation", style: 'color: #fd4c4e' %></td></div>
 <br><br>

@@ -13,11 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 나눔스퀘어OTF;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 .main{
     padding: 10px 10px;
