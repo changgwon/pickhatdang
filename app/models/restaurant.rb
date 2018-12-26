@@ -1,6 +1,7 @@
 class Restaurant < ApplicationRecord
   belongs_to :user
   has_many :tables
+  mount_uploader :img_url, AvatarUploader
 
   def self.read_restaurant(user_id)
    return Restaurant.where("user_id = ?",user_id)
@@ -9,6 +10,11 @@ class Restaurant < ApplicationRecord
   def self.create_restaurant(params,user_id)
     @restaurant = Restaurant.new(params)
     @restaurant.user_id = user_id
+    #### 대기시간 ####
+    @restaurant.total_table = 0
+    @restaurant.total_time = 0
+    @restaurant.waiting = 0
+    #### 대기시간 ####
     @restaurant.save
     return @restaurant
   end

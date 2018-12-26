@@ -8,12 +8,30 @@
 </head>
 
 <div class="IndexName"><h1>예약목록</h1></div>
-
-<% @reservations.each do |reservation| %>
+<br>대기 중인 예약 목록 <br>
+<% @reservations_0.each do |reservation| %>
 <div class="all">
   <div class="my_restaurant"><%= reservation.restaurant_name%></div>
   <div class="my_restaurant"><%= reservation.ncustomer %>명</div>
   <div class="link"><a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a></div>
   <div class="link"><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></div>
 </div>
+  <%end %>
+<br>승인 된 예약 목록<br>
+<% @reservations_1.each do |reservation| %>
+  <div class="all">
+    <div class="my_restaurant"><%= reservation.restaurant_name%></div>
+    <div class="my_restaurant"><%= reservation.ncustomer %>명</div>
+    <div class="link"><a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a></div>
+    <div class="link"><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></div>
+  </div>
+<%end%>
+<br>거절 된 예약 목록<br>
+<% @reservations_2.each do |reservation| %>
+  <div class="all">
+    <div class="my_restaurant"><%= reservation.restaurant_name%></div>
+    <div class="my_restaurant"><%= reservation.ncustomer %>명</div>
+    <div class="link"><a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a></div>
+    <div class="link"><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></div>
+  </div>
 <%end%>

@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get 'restaurant_reservation/edit_reservation/:reservation_id'=>'restaurant_reservation#edit_reservation'
   patch 'restaurant_reservation/update_reservation/:reservation_id'=>'restaurant_reservation#update_reservation'
   get 'restaurant_reservation/destroy_reservation/:reservation_id'=>'restaurant_reservation#destroy_reservation'
+  get 'restaurant_reservation/index_reserve_management/:restaurant_id'=>'restaurant_reservation#index_reserve_management'
+  get 'restaurant_reservation/accept_reservation/:reservation_id'=>'restaurant_reservation#accept_reservation'
+  get 'restaurant_reservation/reject_reservation/:reservation_id'=>'restaurant_reservation#reject_reservation'
   get 'restaurant_recommendation/my_page'
   get 'restaurant_recommendation/get_recommendation'
   get 'restaurant_recommendation/get_shopping_bag'
@@ -41,6 +44,13 @@ Rails.application.routes.draw do
   patch 'restaurant_table_management/out/:table_id' => 'restaurant_table_management#out'
   patch 'restaurant_table_management/start/:schedule_id' => 'restaurant_table_management#start'
   patch 'restaurant_table_management/end/:schedule_id' => 'restaurant_table_management#end'
+  get 'temp/new_division'
+  get 'temp/new_location'
+  get 'temp/new_food'
+  post 'temp/create_division'
+  post 'temp/create_location'
+  post 'temp/create_food'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end

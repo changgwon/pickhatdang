@@ -1,0 +1,18 @@
+<h1>예약 신청 내역</h1>
+  <%@reservations.each do |reservation| %>
+  Table ID : <%=reservation.table_id %>
+  인원 : <%=reservation.ncustomer %>
+  예약날짜 : <%=reservation.reservedate %>
+  예약시간 : <%=reservation.reservetime %>
+
+  <a href="/restaurant_reservation/accept_reservation/<%=reservation.id %>">승인</a>
+  <a href="/restaurant_reservation/reject_reservation/<%=reservation.id %>">거절</a><br><br>
+<% end %>
+
+<h1>예약 승인 내역</h1>
+  <%@accepted_schedules.each do |accepted_schedule| %>
+    Table ID : <%=accepted_schedule.table_id %>
+    인원 : <%=accepted_schedule.ncustomer %>
+    예약날짜 : <%=accepted_schedule.reservedate %>
+    예약시간 : <%=accepted_schedule.reservetime %><br><br>
+<% end %>
