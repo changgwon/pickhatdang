@@ -17,17 +17,20 @@
     <div class="rating">별점 : <%=f.text_field :rating %></div>
     <div class="waiting">대기시간  <%=f.text_field :waiting %></div>
   </div>
-   <br>
+   <br><br>
     <div class="button"><%= f.submit %></div>
 
 <% end %>
 <%else %>
   <%= form_for @priority, url:"/restaurant_recommendation/update_priority/", method: 'patch' do |f| %>
-    거리 : <%=f.text_field :distance %><br>
-    가격대 : <%=f.text_field :price %><br>
-    별점 : <%=f.text_field :rating %><br>
-    대기시간  <%=f.text_field :waiting %><br>
-    <%= f.submit %>
+<div class="new">
+  <div class="distance">거리 : <%=f.text_field :distance %></div>
+  <div class="price">가격대 : <%=f.text_field :price %></div>
+  <div class="rating">별점 : <%=f.text_field :rating %></div>
+  <div class="waiting">대기시간 : <%=f.text_field :waiting %></div>
+</div>
+    <br><br>
+    <div class="button"><%= f.submit %></div>
 
   <% end %>
 <% end  %>
