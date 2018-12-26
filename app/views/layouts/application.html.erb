@@ -10,7 +10,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+
+</head>
 
   <body>
   <div class="main">
@@ -19,6 +21,8 @@
       <div class="edituser"><%=link_to image_tag('/resume.svg', size: 25),'/users/edit' %></div>
     <%end %>
   </div>
+
     <%= yield %>
   </body>
+
 </html>
