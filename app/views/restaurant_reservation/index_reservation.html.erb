@@ -33,12 +33,12 @@
   </thead>
   <tbody>
     <% @reservations_0.each do |reservation| %>
-    <div class="all">
-      <div class="my_restaurant"><td><%= reservation.restaurant_name%></td></div>
-      <div class="my_restaurant"><td><%= reservation.ncustomer %>명</td></div>
-      <div class="link"><td><a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a></td></div>
-      <div class="link"><td><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></td></div>
-    </div>
+  <tr>
+      <td><%= reservation.restaurant_name%></td>
+      <td><%= reservation.ncustomer %>명</td>
+      <td><a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a></td>
+      <td><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></td>
+  </tr>
     <%end %>
   </tbody>
 </table>
@@ -56,12 +56,12 @@
   </thead>
   <tbody>
     <% @reservations_1.each do |reservation| %>
-      <div class="all">
-        <div class="my_restaurant"><td><%= reservation.restaurant_name%></td></div>
-        <div class="my_restaurant"><td><%= reservation.ncustomer %>명</td></div>
-        <div class="link"><td><a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a></td></div>
-        <div class="link"><td><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></td></div>
-      </div>
+  <tr>
+       <td><%= reservation.restaurant_name%></td>
+        <td><%= reservation.ncustomer %>명</td>
+        <td><a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a></td>
+        <td><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></td>
+  </tr>
     <%end%>
   </tbody>
 </table>
@@ -78,13 +78,14 @@
   </tr>
   </thead>
   <tbody>
+  <tr>
     <% @reservations_2.each do |reservation| %>
-      <div class="all">
-        <div class="my_restaurant"><td><%= reservation.restaurant_name%></td></div>
-        <div class="my_restaurant"><td><%= reservation.ncustomer %>명</td></div>
-        <div class="link"><td><a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a></td></div>
-        <div class="link"><td><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></td></div>
-      </div>
+<tr>
+       <td><%= reservation.restaurant_name%></td>
+        <td><%= reservation.ncustomer %>명</td>
+        <td><a href='/restaurant_reservation/edit_reservation/<%=reservation.id %>'>변경</a></td>
+       <td><a href='/restaurant_reservation/destroy_reservation/<%=reservation.id %>'>취소</a></td>
+      </tr>
     <%end%>
   </tbody>
 </table>

@@ -19,7 +19,10 @@ class RestaurantRecommendationController < ApplicationController
     end
   end
   def get_recommendation
-    if current_user.priorities.first == nil
+    x=current_user.priorities.first
+    if x == nil
+      redirect_to '/restaurant_recommendation/priority_setting'
+    elsif x.price == nil || x.rating == nil || x.waiting ==nil || x.distance == nil
       redirect_to '/restaurant_recommendation/priority_setting'
     else
       @recommendation_system=current_user.recommendation_systems.first
