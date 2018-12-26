@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181225164221) do
+ActiveRecord::Schema.define(version: 20181226053949) do
 
   create_table "food_categories", force: :cascade do |t|
     t.string "food_category"
@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20181225164221) do
     t.string "img_url"
     t.integer "total_table"
     t.float "total_time"
+    t.string "map_url"
   end
 
   create_table "schedules", force: :cascade do |t|
