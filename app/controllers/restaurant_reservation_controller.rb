@@ -59,6 +59,7 @@ class RestaurantReservationController < ApplicationController
 
   def edit_reservation
     @reservation=Reservation.find(params[:reservation_id])
+    @restaurant= Restaurant.find(@reservation.restaurant_id)
     # @table=Table.where("restaurant_id = ? AND table_num = ? ",params[:restaurant_id],params[:table_num])
   end
 
