@@ -1,24 +1,17 @@
-# README
+# 실행방법
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+실행환경 
 
-Things you may want to cover:
+운영체제 : window os
+사용 언어 : ruby 2.3.3
+웹 프레임 워크 : Ruby on Rails 5.1.6.1
 
-* Ruby version
+Console에 명령어 
+1. bundle install
+2. bundle update
+3. rake db:migrate 
+4. rails s
 
-* System dependencies
+입력하면 서버가 구동됩니다.
+서버를 중단시키려면 ctrl+c 를 누르세요. 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
