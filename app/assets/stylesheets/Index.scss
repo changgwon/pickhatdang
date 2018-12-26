@@ -1,8 +1,3 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .IndexName{
   padding: 20px;
   color: #fff;
@@ -21,6 +16,7 @@
 .button{
   display: flex;
   justify-content: center;
+  background-color: #fff;
 }
 .all{
   display: flex;
