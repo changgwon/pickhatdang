@@ -4,13 +4,14 @@
 
   <link rel="stylesheet" type="text/css" href="/assets/mypage.scss">
   <style>
+
   </style>
 </head>
 
 <div class="welcome"><h1>'Welcome To 픽!했당'</h1></div>
 <div class="Manage_me">
-  <div class="priority"><%= link_to '우선순위 관리', "/restaurant_recommendation/priority_setting", style: 'color: #fff'%></div>
-  <div class="rsearch"><%= link_to '레스토랑 검색', "/restaurant_recommendation/search_setting", style: 'color: #fff' %></div>
-  <div class="recommend"><%= link_to '예약 내역', "/restaurant_reservation/index_reservation", style: 'color: #fff' %></div>
-  <div class="bag"><%= link_to '장바구니', "/restaurant_recommendation/get_shopping_bag", style: 'color: #fff' %></div>
+  <div class="priority"><td><%= link_to '우선순위 관리', "/restaurant_recommendation/priority_setting", style: 'color: #fff'%></td></div>
+  <div class="rsearch"><td><%= link_to '레스토랑 검색', "/restaurant_recommendation/search_setting", style: 'color: #fff'%></td></div>
+  <div class="recommend"><td><%= link_to '예약 내역', "/restaurant_reservation/index_reservation", style: 'color: #fff'%></td></div>
+  <div class="bag"><td><%= link_to '장바구니', "/restaurant_recommendation/get_shopping_bag", style: 'color: #fff'%></td></div>
 </div>
